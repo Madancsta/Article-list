@@ -1,0 +1,18 @@
+{% extends "templates/web.html" %} {% block page_content %} {% if image %}
+<img src="{{ image }}" alt="{{ title }}" style="max-width:200px; border-radius:8px; margin-bottom:10px;"> {% endif %}
+
+<h2>{{ article_name }}</h2>
+
+<p><strong>By:</strong> {{ author }}</p>
+
+{% if status == 'Available' %}
+<p style="color:green;"><strong>Available</strong></p>
+{% elif status == 'Issued' %}
+<p style="color:red;"><strong>Issued</strong></p>
+{% endif %}
+
+<p><strong>Publisher:</strong> {{ publisher }}</p>
+<p><strong>ISBN:</strong> {{ isbn }}</p>
+<p>{{ description }}</p>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% if doc.image %}
+<a href="{{ doc.route }}">
+    <img src="{{ doc.image }}" alt="{{ doc.article_name }}" style="max-width:200px; border-radius:8px; margin-bottom:10px;">
+</a>
+{% endif %}
+
+<h3>
+    <a href="{{ doc.route }}" style="text-decoration:none; color:#333;">
+    {{ doc.article_name }}
+  </a>
+</h3>
+
+<p>By {{ doc.author }}</p>
+<br>
